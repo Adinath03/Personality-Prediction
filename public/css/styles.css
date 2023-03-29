@@ -1,0 +1,98 @@
+body {
+  font-family: "Montserrat";
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat';
+}
+
+/* Survey */
+#survey {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.form-select {
+  font-size: 20px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+button[type="submit"] {
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: #e1e7ed;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0069d9;
+}
+
+
+
+/* footer */
+#footer {
+  padding: 5% 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bottom-container{
+  align-items: center;
+}
+
+.footer-image {
+  width: 2%;
+}
+
+.footer-link {
+  color: #11999E;
+  margin: 20px;
+}
+
+.footer-link:hover {
+  color: #BADA55;
+}
+
+.footer-link img {
+  transition: transform 0.5s ease;
+}
+
+.footer-link:hover img {
+  transform: scale(1.2);
+}
+
+@media only screen and (max-width: 600px) {
+  .footer-image {
+    width: 10%;
+  }
+}
