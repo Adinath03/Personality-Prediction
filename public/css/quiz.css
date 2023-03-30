@@ -78,11 +78,47 @@ h3 {
   border-radius: 10px;
   margin-bottom: 50px;
   width: 100%;
+  text-align: justify;
 }
 
 .question {
   margin-bottom: 20px;
   padding: 5px 10px;
+  max-width: 700px;
+}
+
+.form-radio-group {
+  display: flex;
+  flex-direction: column;
+  background-color:white;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.form-radio-group label {
+  margin-left: 10px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.form-radio-group input[type="radio"] {
+  display: none;
+}
+
+.form-radio-group input[type="radio"] + label:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 2px solid #999;
+  vertical-align: middle;
+}
+
+.form-radio-group input[type="radio"]:checked + label:before {
+  background-color: #666;
+  border-color: #666;
 }
 
 label {
