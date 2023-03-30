@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Personality Prediction Result</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/brain.png">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/result.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="result-box">
+      <h2>Your MBTI Personality Result:</h2>
+      <h1>
+        <%= output1[index] %>
+      </h1>
+    </div>
+    <div class="info-box">
+      <h2>MBTI Model</h2>
+      <p>
+        The Myers–Briggs Type Indicator (MBTI) is an introspective self-report questionnaire indicating different
+        psychological preferences in how people perceive the world and make decisions. The MBTI is based on the
+        conceptual theory proposed by Swiss psychiatrist Carl Jung, who had speculated that humans experience the world
+        using four principal psychological functions – sensation, intuition, feeling, and thinking – and that one of
+        these four functions is dominant for a person most of the time. The MBTI model consists of 16 personality types,
+        each representing a combination of four letters – E (Extroverted) or I (Introverted), S (Sensing) or N
+        (Intuitive), T (Thinking) or F (Feeling), and J (Judging) or P (Perceiving).
+      </p>
+      <h3>
+        <%= output1[index] %> Personality Traits:
+      </h3>
+      <p><b>
+          <%= output2[index] %>
+        </b>
+      </p>
+      <ul>
+        <% for (let i=0; i < output3[index].length; i++) {%>
+        <li><%= output3[index][i] %></li>
+        <% } %>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

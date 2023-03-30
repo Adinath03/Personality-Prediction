@@ -10,8 +10,13 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
+    "child_process": "^1.0.2",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
-    "python-shell": "^5.0.0"
+    "pandas": "^0.0.3",
+    "pickle": "^0.2.0",
+    "python-shell": "^5.0.0",
+    "scikit-learn": "^0.1.0",
+    "sys": "^0.0.1"
   }
 }

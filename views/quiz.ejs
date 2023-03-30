@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="images/brain.png">
+  <link rel="stylesheet" href="css/quiz.css">
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
@@ -16,9 +17,7 @@
   <!-- google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;700;900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
   <title>Personality Prediction</title>
 </head>
 
@@ -28,7 +27,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img src="images/logo.png" alt="Bootstrap" width="90" height="24">
+          <img src="images/logo.png" alt="Bootstrap" width="120" height="30">
         </a>
         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
           <ul class="navbar-nav mb-2 mb-lg-0">
@@ -36,10 +35,10 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About Us</a>
+              <a class="nav-link active" href="html/about_us.html">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link active" href="#">Contact</a>
             </li>
           </ul>
         </div>
@@ -49,53 +48,453 @@
 
   <!------------ Survey -------------->
   <section id="survey">
-    <h1>Survey</h1>
+    <h1>Quiz</h1>
     <form action="/submit" method="post">
-      <div class="question">
-        <label for="q1">I enjoy being in large groups of people.</label>
-        <select class="form-select" id="q1" name="q1">
-          <option value="Strongly Disagree">Strongly Disagree</option>
-          <option value="Disagree">Disagree</option>
-          <option value="Neutral">Neutral</option>
-          <option value="Agree">Agree</option>
-          <option value="Strongly Agree">Strongly Agree</option>
-        </select>
+      <div class="num-que">
+        <h3>Numeric Question</h3>
+        <div class="question">
+          <label for="q1">I enjoy being in large groups of people.</label>
+          <select class="form-select" id="q1" name="q1">
+            <option value="1">Strongly Disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">Neutral</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="q2">I feel energized after interacting with many people. </label>
+          <select class="form-select" id="q2" name="q2">
+            <option value="1">Strongly Disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">Neutral</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="q3">I find it easy to approach and talk to strangers.</label>
+          <select class="form-select" id="q3" name="q3">
+            <option value="1">Strongly Disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">Neutral</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="q4">I like being the center of attention in social situations.</label>
+          <select class="form-select" id="q4" name="q4">
+            <option value="1">Strongly Disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">Neutral</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="q5">I prefer spending time alone over being with others.</label>
+          <select class="form-select" id="q5" name="q5">
+            <option value="1">Strongly Disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">Neutral</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="q6">I feel drained after spending a lot of time around people and need alone time to
+            recharge.</label>
+          <select class="form-select" id="q6" name="q6">
+            <option value="1">Strongly Disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">Neutral</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="q7">I prefer to work independently and avoid group projects if possible.</label>
+          <select class="form-select" id="q7" name="q7">
+            <option value="1">Strongly Disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">Neutral</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="q8">I prefer to listen and observe in social situations, rather than being the one to initiate
+            conversation.</label>
+          <select class="form-select" id="q8" name="q8">
+            <option value="1">Strongly Disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">Neutral</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="q9">I prefer to focus on the facts and concrete information when making decisions.</label>
+          <select class="form-select" id="q9" name="q9">
+            <option value="1">Strongly Disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">Neutral</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="q10">I am more concerned with the present moment and practical realities than future
+            possibilities.</label>
+          <select class="form-select" id="q10" name="q10">
+            <option value="1">Strongly Disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">Neutral</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="q11">I rely on past experiences to guide my decisions and actions.</label>
+          <select class="form-select" id="q11" name="q11">
+            <option value="1">Strongly Disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">Neutral</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="q12">I often see patterns and connections in things that others don't.</label>
+          <select class="form-select" id="q12" name="q12">
+            <option value="1">Strongly Disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">Neutral</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="q13">I trust my instincts and rely on my gut feeling when making decisions.</label>
+          <select class="form-select" id="q13" name="q13">
+            <option value="1">Strongly Disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">Neutral</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="q14">I am highly imaginative and enjoy exploring new ideas and possibilities.</label>
+          <select class="form-select" id="q14" name="q14">
+            <option value="1">Strongly Disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">Neutral</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="q15">I am more interested in the theoretical and abstract aspects of a situation.</label>
+          <select class="form-select" id="q15" name="q15">
+            <option value="1">Strongly Disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">Neutral</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="q16">I like to have a detailed plan before taking action.</label>
+          <select class="form-select" id="q16" name="q16">
+            <option value="1">Strongly Disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">Neutral</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="q17">We should make decisions based on logical reasoning and facts.</label>
+          <select class="form-select" id="q17" name="q17">
+            <option value="1">Strongly Disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">Neutral</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="q18">The best decision is the one that maximizes efficiency and productivity.</label>
+          <select class="form-select" id="q18" name="q18">
+            <option value="1">Strongly Disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">Neutral</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="q19">Objectivity should be the primary consideration when making decisions.</label>
+          <select class="form-select" id="q19" name="q19">
+            <option value="1">Strongly Disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">Neutral</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="q20">The most important factor in decision making is the analysis of available data.</label>
+          <select class="form-select" id="q20" name="q20">
+            <option value="1">Strongly Disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">Neutral</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="q21"> I believe that we should prioritize our personal values in decision making.</label>
+          <select class="form-select" id="q21" name="q21">
+            <option value="1">Strongly Disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">Neutral</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="q22">I think we should consider how our actions will affect others before making a
+            decision.</label>
+          <select class="form-select" id="q22" name="q22">
+            <option value="1">Strongly Disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">Neutral</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="q23">I feel that relationships and emotional connections should play a role in decision
+            making.</label>
+          <select class="form-select" id="q23" name="q23">
+            <option value="1">Strongly Disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">Neutral</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="q24">I believe that intuition should guide our decisions in certain situations.</label>
+          <select class="form-select" id="q24" name="q24">
+            <option value="1">Strongly Disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">Neutral</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="q25">I like to have a clear plan and stick to it.</label>
+          <select class="form-select" id="q25" name="q25">
+            <option value="1">Strongly Disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">Neutral</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="q26">I enjoy having a structured and organized approach to tasks.</label>
+          <select class="form-select" id="q26" name="q26">
+            <option value="1">Strongly Disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">Neutral</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="q27">I feel most comfortable when I know what to expect in a situation.</label>
+          <select class="form-select" id="q27" name="q27">
+            <option value="1">Strongly Disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">Neutral</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="q28">I believe in making decisions and sticking to them.</label>
+          <select class="form-select" id="q28" name="q28">
+            <option value="1">Strongly Disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">Neutral</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="q29">I prefer to stay flexible and adapt to changing situations.</label>
+          <select class="form-select" id="q29" name="q29">
+            <option value="1">Strongly Disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">Neutral</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="q30">I like to keep my options open and explore different possibilities.</label>
+          <select class="form-select" id="q30" name="q30">
+            <option value="1">Strongly Disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">Neutral</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="q31">I enjoy going with the flow and being spontaneous.</label>
+          <select class="form-select" id="q31" name="q31">
+            <option value="1">Strongly Disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">Neutral</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="q32">I think it's important to remain open to new ideas and possibilities.</label>
+          <select class="form-select" id="q32" name="q32">
+            <option value="1">Strongly Disagree</option>
+            <option value="2">Disagree</option>
+            <option value="3">Neutral</option>
+            <option value="4">Agree</option>
+            <option value="5">Strongly Agree</option>
+          </select>
+        </div>
       </div>
 
-      <div class="question">
-        <label for="q2">I feel energized after interacting with many people. </label>
-        <select class="form-select" id="q2" name="q2">
-          <option value="Strongly Disagree">Strongly Disagree</option>
-          <option value="Disagree">Disagree</option>
-          <option value="Neutral">Neutral</option>
-          <option value="Agree">Agree</option>
-          <option value="Strongly Agree">Strongly Agree</option>
-        </select>
+      <div class="txt-que">
+        <h3>Textual Question</h3>
+
+        <div class="question">
+          <label for="tq1">How do you prefer to spend your free time?</label>
+          <select class="form-select" id="tq1" name="tq1">
+            <option
+              value="I prefer to spend my free time alone, reading a book or watching a movie. I find it relaxing and rejuvenating to be in my own space and not have to socialize. I recharge my batteries by being alone.">
+              I prefer to spend my free time alone, reading a book or watching a movie. I find it relaxing and
+              rejuvenating to be in my own space and not have to socialize. I recharge my batteries by being alone.
+            </option>
+            <option
+              value="I prefer to spend my free time with others, going out with friends or trying new activities. I find it energizing and fun to be around people and have new experiences. I recharge my batteries by being with others.">
+              I prefer to spend my free time with others, going out with friends or trying new activities. I find it
+              energizing and fun to be around people and have new experiences. I recharge my batteries by being with
+              others.</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="tq2">How do you prefer to approach problem-solving?</label>
+          <select class="form-select" id="tq2" name="tq2">
+            <option
+              value="I prefer to approach problem-solving by using my practical knowledge and experience. I like to focus on the concrete facts and details and come up with a solution that is based on tangible evidence. I find it more satisfying when I can find a solution that is tried and true.">
+              I prefer to approach problem-solving by using my practical knowledge and experience. I like to focus on
+              the
+              concrete facts and details and come up with a solution that is based on tangible evidence. I find it more
+              satisfying when I can find a solution that is tried and true.</option>
+            <option
+              value="I prefer to approach problem-solving by using my imagination and creativity. I like to focus on the big picture and the possibilities, and come up with a solution that is unique and innovative. I find it more satisfying when I can find a solution that is novel and unexpected.">
+              I prefer to approach problem-solving by using my imagination and creativity. I like to focus on the big
+              picture and the possibilities, and come up with a solution that is unique and innovative. I find it more
+              satisfying when I can find a solution that is novel and unexpected.</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="tq3">When making important decisions, how do you prioritize your values and beliefs?</label>
+          <select class="form-select" id="tq3" name="tq3">
+            <option
+              value="When making important decisions, I prioritize logic and objectivity. I try to consider the consequences of my actions objectively and make decisions based on what is fair and just. I find it more important to maintain a logical and consistent decision-making process, rather than basing my decisions on my emotions or personal values.">
+              When making important decisions, I prioritize logic and objectivity. I try to consider the consequences of
+              my actions objectively and make decisions based on what is fair and just. I find it more important to
+              maintain a logical and consistent decision-making process, rather than basing my decisions on my emotions
+              or
+              personal values.</option>
+            <option
+              value="When making important decisions, I prioritize my personal values and beliefs. I try to consider the impact of my actions on the people involved and make decisions based on what is in line with my heart. I find it more important to maintain a consistent set of values and beliefs, rather than basing my decisions on pure logic.">
+              When making important decisions, I prioritize my personal values and beliefs. I try to consider the impact
+              of my actions on the people involved and make decisions based on what is in line with my heart. I find it
+              more important to maintain a consistent set of values and beliefs, rather than basing my decisions on pure
+              logic.</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="tq4">How do you typically approach your daily schedule and tasks?</label>
+          <select class="form-select" id="tq4" name="tq4">
+            <option
+              value="I prefer to have a structured and organized approach to my daily tasks. I like to have a plan for my day and follow it as closely as possible. I feel more comfortable when I have completed my tasks and my schedule is in order. I find that having a structured routine helps me to be more productive and achieve my goals.">
+              I prefer to have a structured and organized approach to my daily tasks. I like to have a plan for my day
+              and
+              follow it as closely as possible. I feel more comfortable when I have completed my tasks and my schedule
+              is
+              in order. I find that having a structured routine helps me to be more productive and achieve my goals.
+            </option>
+            <option
+              value="I prefer a flexible and spontaneous approach to my daily tasks. I like to leave room for surprises and unexpected opportunities. I feel more comfortable when I have the freedom to change my plans if something more interesting or exciting comes up. I find that having a flexible and spontaneous approach helps me to be more adaptable and go with the flow.">
+              I prefer a flexible and spontaneous approach to my daily tasks. I like to leave room for surprises and
+              unexpected opportunities. I feel more comfortable when I have the freedom to change my plans if something
+              more interesting or exciting comes up. I find that having a flexible and spontaneous approach helps me to
+              be
+              more adaptable and go with the flow.</option>
+
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="tq5">I like being the center of attention in social situations.</label>
+          <input type="text" class="form-control" id="tq5" name="tq5" placeholder="Enter your response" required>
+        </div>
       </div>
 
-      <div class="question">
-        <label for="q3">I find it easy to approach and talk to strangers.</label>
-        <select class="form-select" id="q3" name="q3">
-          <option value="Strongly Disagree">Strongly Disagree</option>
-          <option value="Disagree">Disagree</option>
-          <option value="Neutral">Neutral</option>
-          <option value="Agree">Agree</option>
-          <option value="Strongly Agree">Strongly Agree</option>
-        </select>
-      </div>
+      <button type="submit">Get Result!</button>
 
-      <div class="question">
-        <label for="q4">I like being the center of attention in social situations.</label>
-        <select class="form-select" id="q4" name="q4">
-          <option value="Strongly Disagree">Strongly Disagree</option>
-          <option value="Disagree">Disagree</option>
-          <option value="Neutral">Neutral</option>
-          <option value="Agree">Agree</option>
-          <option value="Strongly Agree">Strongly Agree</option>
-        </select>
-      </div>
-
-      <button type="submit">Submit</button>
     </form>
   </section>
 
@@ -112,7 +511,7 @@
           src="images/gmail.png" alt="Gmail"></a>
       <br>
       <br>
-      <p class="copyright">© Copyright 2022. all rights reserved.</p>
+      <p class="copyright">© Copyright 2023. All rights reserved.</p>
     </div>
   </footer>
 
