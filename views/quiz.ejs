@@ -49,10 +49,10 @@
 
   <!------------ Survey -------------->
   <section id="survey">
-    <h1>Quiz</h1>
+    <h1>Personality Prediction Questionnaire</h1>
     <form action="/submit" method="post">
       <div class="num-que">
-        <h3>Numeric Question</h3>
+        <h3>MCQ Question</h3>
         <div class="question">
           <label for="q1">I enjoy being in large groups of people.</label>
           <select class="form-select" id="q1" name="q1">
@@ -512,7 +512,9 @@
         </div>
       </div>
 
-      <button type="submit">Get Result!</button>
+      <button id="submitBtn" type="submit">Get Result!</button>
+
+      <div id="loader" class="loader"></div>
     </form>
   </section>
 
@@ -533,7 +535,7 @@
     </div>
   </footer>
 
-  <!-- <script src="script/quiz.js"></script> -->
+  <script src="script/quiz.js"></script>
 </body>
 
 </html>
