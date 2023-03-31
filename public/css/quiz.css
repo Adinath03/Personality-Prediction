@@ -25,12 +25,18 @@ h3 {
 
 #navbar .nav-item {
   padding: 0 15px;
-  text-decoration: underline;
-  text-decoration: none;
+  color: #c7cff1;
+  /* text-shadow:2px 2px #c7cff1; */
   font-size: 19px;
   font-weight: 600;
   color: #1a1a1a;
   transition: 0.3s ease;
+}
+
+#navbar .nav-item:hover {
+  font-size: 20px;
+  
+  text-decoration-line: underline;
 }
 
 /* Survey */
@@ -87,18 +93,23 @@ h3 {
   max-width: 700px;
 }
 
+.question label{
+  font-weight: 600;
+}
 .form-radio-group {
   display: flex;
   flex-direction: column;
   background-color:white;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  padding: 4px 4px;
 }
 
 .form-radio-group label {
   margin-left: 10px;
   font-size: 16px;
   line-height: 24px;
+  font-weight: 400;
 }
 
 .form-radio-group input[type="radio"] {
@@ -108,8 +119,8 @@ h3 {
 .form-radio-group input[type="radio"] + label:before {
   content: "";
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   margin-right: 10px;
   border-radius: 50%;
   border: 2px solid #999;
@@ -117,8 +128,9 @@ h3 {
 }
 
 .form-radio-group input[type="radio"]:checked + label:before {
-  background-color: #666;
+  background-color: #A683E3;
   border-color: #666;
+  border: 1px solid;
 }
 
 label {
@@ -141,6 +153,7 @@ label {
   font-size: 16px;
 }
 
+/* submit button */
 
 button[type="submit"] {
   background-image: url(../images/button.png);
@@ -156,10 +169,9 @@ button[type="submit"] {
   display: block;
 }
 
-/* button[type="submit"]:hover {
-  background-color: #a4c9ee;
-} */
-
+ button[type="submit"]:hover {
+  font-size: 20px;
+}
 
 /* footer */
 #footer {

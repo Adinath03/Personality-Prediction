@@ -49,7 +49,6 @@ app.get('/', (req, res) => {
   res.render('quiz');
 });
 
-
 app.post('/submit', (req, res) => {
   const numericResponses = [];
   let textualResponses = "";
@@ -93,6 +92,9 @@ app.post('/submit', (req, res) => {
   });
 });
 
+app.post('/newsLetter',(req,res) => {
+    console.log("request received");
+})
 app.listen(80, () => {
   console.log();
 });

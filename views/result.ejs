@@ -18,31 +18,56 @@
         <%= output1[index] %>
       </h1>
     </div>
-    <div class="info-box">
-      <h2>MBTI Model</h2>
-      <p>
-        The Myers–Briggs Type Indicator (MBTI) is an introspective self-report questionnaire indicating different
-        psychological preferences in how people perceive the world and make decisions. The MBTI is based on the
-        conceptual theory proposed by Swiss psychiatrist Carl Jung, who had speculated that humans experience the world
-        using four principal psychological functions – sensation, intuition, feeling, and thinking – and that one of
-        these four functions is dominant for a person most of the time. The MBTI model consists of 16 personality types,
-        each representing a combination of four letters – E (Extroverted) or I (Introverted), S (Sensing) or N
-        (Intuitive), T (Thinking) or F (Feeling), and J (Judging) or P (Perceiving).
-      </p>
-      <h3>
-        <%= output1[index] %> Personality Traits:
-      </h3>
-      <p><b>
-          <%= output2[index] %>
-        </b>
-      </p>
-      <ul>
-        <% for (let i=0; i < output3[index].length; i++) {%>
-        <li><%= output3[index][i] %></li>
-        <% } %>
-      </ul>
-    </div>
+    <main>
+      <section id="MBTI">
+        <h2>MBTI Model</h2>
+        <p>
+          The Myers–Briggs Type Indicator (MBTI) is an introspective self-report questionnaire indicating different
+          psychological preferences in how people perceive the world and make decisions. The MBTI is based on the
+          conceptual theory proposed by Swiss psychiatrist Carl Jung, who had speculated that humans experience the
+          world
+          using four principal psychological functions – sensation, intuition, feeling, and thinking – and that one of
+          these four functions is dominant for a person most of the time. The MBTI model consists of 16 personality
+          types,
+          each representing a combination of four letters – E (Extroverted) or I (Introverted), S (Sensing) or N
+          (Intuitive), T (Thinking) or F (Feeling), and J (Judging) or P (Perceiving).
+        </p>
+      </section>
+      <section id="Trait">
+        <h3>
+          <%= output1[index] %> Personality Traits:
+        </h3>
+        <p><b>
+            <%= output2[index] %>
+          </b>
+        </p>
+        <ul>
+          <% for (let i=0; i < output3[index].length; i++) {%>
+            <li>
+              <%= output3[index][i] %>
+            </li>
+            <% } %>
+        </ul>
+      </section>
+    </main>
   </div>
+
+  <!------------- Footer ------------->
+  <footer class="white-section" id="footer">
+    <div class="bottom-container">
+      <a class="footer-link" href="https://www.linkedin.com/in/adinath-mahandule/"><img class="footer-image"
+          src="../images/linkedin.png" alt="LinkedIn"></a>
+      <a class="footer-link" href="https://twitter.com/"><img class="footer-image" src="../images/twitter.png"
+          alt="Twitter"></a>
+      <a class="footer-link" href="https://www.instagram.com/__adi_03__/"><img class="footer-image"
+          src="../images/instagram.png" alt="instagram"></a>
+      <a class="footer-link" href="mailto:adinathmahandule.07@gmail.com"><img class="footer-image"
+          src="../images/gmail.png" alt="Gmail"></a>
+      <br>
+      <br>
+      <p class="copyright">© Copyright 2023. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 
 </html>
