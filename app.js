@@ -62,7 +62,7 @@ app.post('/submit', (req, res) => {
   }
 
   // console.log(numericResponses);
-  // console.log(textualResponses);
+  //console.log(textualResponses);
 
   // spawn a Python process and pass the numeric and textual responses as arguments
   const pythonProcess = spawn('python', ['script.py']);
