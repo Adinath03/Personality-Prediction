@@ -95,6 +95,6 @@ app.post('/submit', (req, res) => {
 app.post('/newsLetter',(req,res) => {
     console.log("request received");
 })
-app.listen(80, () => {
+app.listen(3000, () => {
   console.log();
 });
