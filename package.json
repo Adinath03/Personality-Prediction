@@ -4,14 +4,13 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prestart": "python -m venv .venv",
-    "start": ".venv\\Scripts\\activate && pip install -r requirements.txt && node app.js",
-    "poststart": "deactivate"
+    "install": "npm run install:python",
+    "install:python": "python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt"
   },
   "author": "Adinath Mahandule",
   "license": "ISC",
   "dependencies": {
+    "python": "^3.9.0",
     "body-parser": "^1.20.2",
     "catboost": "1.25.1",
     "child_process": "^1.0.2",
