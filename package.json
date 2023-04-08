@@ -9,7 +9,6 @@
   "author": "Adinath Mahandule",
   "license": "ISC",
   "dependencies": {
-    "python": "^3.9.0",
     "body-parser": "^1.20.2",
     "catboost": "1.25.1",
     "child_process": "^1.0.2",
