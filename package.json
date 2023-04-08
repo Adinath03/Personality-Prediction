@@ -4,8 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "install": "npm run install:python",
-    "install:python": "python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Adinath Mahandule",
   "license": "ISC",
