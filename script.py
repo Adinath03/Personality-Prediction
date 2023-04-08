@@ -19,21 +19,21 @@ numeric_responses = data['numeric']
 textual_responses = data['textual']
 numeric_responses = list(map(int, numeric_responses))
 
-# Remove URLs using regular expressions
-textual_responses = re.sub(r"http\S+", "", textual_responses)
+# # Remove URLs using regular expressions
+# textual_responses = re.sub(r"http\S+", "", textual_responses)
 
-# Remove special characters using regular expressions
-textual_responses = re.sub(r"[^a-zA-Z0-9]+", " ", textual_responses)
+# # Remove special characters using regular expressions
+# textual_responses = re.sub(r"[^a-zA-Z0-9]+", " ", textual_responses)
 
-# Tokenize the textual_responses into words
-words = nltk.word_tokenize(textual_responses)
+# # Tokenize the textual_responses into words
+# words = nltk.word_tokenize(textual_responses)
 
-# Remove stop words using NLTK's English stop words list
-stop_words = set(stopwords.words("english"))
-words = [word for word in words if word.lower() not in stop_words]
+# # Remove stop words using NLTK's English stop words list
+# stop_words = set(stopwords.words("english"))
+# words = [word for word in words if word.lower() not in stop_words]
 
-# Join the words back into a string
-textual_responses = " ".join(words)
+# # Join the words back into a string
+# textual_responses = " ".join(words)
 
 # Initialize the TF-IDF Vectorizer with 32 features
 tfidf = TfidfVectorizer(max_features=32)
