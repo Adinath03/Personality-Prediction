@@ -4,7 +4,10 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "python -m venv .venv",
+    "start": ".venv\\Scripts\\activate && pip install -r requirements.txt && node app.js",
+    "poststart": "deactivate"
   },
   "author": "Adinath Mahandule",
   "license": "ISC",
