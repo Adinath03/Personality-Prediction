@@ -3,8 +3,6 @@ import sys
 import pickle
 import pandas as pd
 import json
-import nltk
-from nltk.corpus import stopwords
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 # load the pickled model
