@@ -8,6 +8,49 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+const mquestion = [
+  "I enjoy being in large groups of people.",
+  "I feel energized after interacting with many people.",
+  "I find it easy to approach and talk to strangers.",
+  "I like being the center of attention in social situations.",
+  "I prefer spending time alone over being with others.",
+  "I feel drained after spending a lot of time around people and need alone time to recharge.",
+  "I prefer to work independently and avoid group projects if possible.",
+  "I prefer to listen and observe in social situations, rather than being the one to initiate conversation.",
+  "I prefer to focus on the facts and concrete information when making decisions.",
+  "I am more concerned with the present moment and practical realities than future possibilities.",
+  "I rely on past experiences to guide my decisions and actions.",
+  "I often see patterns and connections in things that others don't.",
+  "I trust my instincts and rely on my gut feeling when making decisions.",
+  "I am highly imaginative and enjoy exploring new ideas and possibilities.",
+  "I am more interested in the theoretical and abstract aspects of a situation.",
+  "I like to have a detailed plan before taking action.",
+  "We should make decisions based on logical reasoning and facts.",
+  "The best decision is the one that maximizes efficiency and productivity.",
+  "Objectivity should be the primary consideration when making decisions.",
+  "The most important factor in decision making is the analysis of available data.",
+  "I believe that we should prioritize our personal values in decision making.",
+  "I think we should consider how our actions will affect others before making a decision.",
+  "I feel that relationships and emotional connections should play a role in decision making.",
+  "I believe that intuition should guide our decisions in certain situations.",
+  "I like to have a clear plan and stick to it.",
+  "I enjoy having a structured and organized approach to tasks",
+  "I feel most comfortable when I know what to expect in a situation.",
+  "I believe in making decisions and sticking to them.",
+  "I prefer to stay flexible and adapt to changing situations.",
+  "I like to keep my options open and explore different possibilities.",
+  "I enjoy going with the flow and being spontaneous.",
+  "I think it's important to remain open to new ideas and possibilities."
+];
+
+const tquestion = [
+  "How do you prefer to spend your free time?",
+  "How do you prefer to approach problem-solving?",
+  "When making important decisions, how do you prioritize your values and beliefs?",
+  "How do you typically approach your daily schedule and tasks?",
+  "Describe a challenging situation you have faced in the past and how you overcame it."
+];
+
 const personality = ["ENFJ", "ENFP", "ENTJ", "ENTP", "ESFJ", "ESFP", "ESTJ", "ESTP", "INFJ", "INFP", "INTJ", "INTP", "ISFJ", "ISFP", "ISTJ", "ISTP"];
 
 const info = ["A Protagonist (ENFJ) is a person with the Extraverted, Intuitive, Feeling, and Judging personality traits. These warm, forthright types love helping others, and they tend to have strong ideas and values. They back their perspective with the creative energy to achieve their goals.",
@@ -27,26 +70,26 @@ const info = ["A Protagonist (ENFJ) is a person with the Extraverted, Intuitive,
   "A Logistician (ISTJ) is someone with the Introverted, Observant, Thinking, and Judging personality traits. These people tend to be reserved yet willful, with a rational outlook on life. They compose their actions carefully and carry them out with methodical purpose.",
   "A Virtuoso (ISTP) is someone with the Introverted, Observant, Thinking, and Prospecting personality traits. They tend to have an individualistic mindset, pursuing goals without needing much external connection. They engage in life with inquisitiveness and personal skill, varying their approach as needed."];
 
-  const traits = [  ["Charismatic and inspiring", "Empathetic and compassionate", "Energetic and enthusiastic", "Dedicated and responsible", "Idealistic and romantic", "Diplomatic and tactful"], // ENFJ
-  ["Enthusiastic and creative", "Curious and open-minded", "Spontaneous and playful", "Energetic and friendly", "Imaginative and original", "Passionate and expressive"], // ENFP
-  ["Efficient and strategic", "Assertive and confident", "Ambitious and determined", "Decisive and authoritative", "Responsible and reliable", "Objective and logical"], // ENTJ
-  ["Quick-witted and curious", "Inventive and original", "Enthusiastic and energetic", "Excellent brainstormers", "Charismatic and inspiring", "Charming and confident"], // ENTP
-  ["Friendly and sociable", "Responsible and dutiful", "Conscientious and practical", "Sociable and talkative", "Sensible and cooperative", "Organized and thorough"], // ESFJ
-  ["Spontaneous and energetic", "Enthusiastic and fun-loving", "Flexible and adaptable", "Friendly and sociable", "Creative and artistic", "Charming and optimistic"], // ESFP
-  ["Practical and dependable", "Organized and efficient", "Logical and analytical", "Dutiful and responsible", "Loyal and hard-working", "Sensible and traditional"], // ESTJ
-  ["Energetic and action-oriented", "Adventurous and spontaneous", "Resourceful and quick-witted", "Charismatic and confident", "Optimistic and fun-loving", "Charming and lively"], // ESTP
-  ["Insightful and inspiring", "Introspective and reflective", "Determined and passionate", "Altruistic and empathetic", "Complex and imaginative", "Idealistic and principled"], // INFJ
-  ["Creative and idealistic", "Open-minded and curious", "Supportive and empathetic", "Enthusiastic and energetic", "Determined and passionate", "Flexible and adaptable"], // INFP
-  ["Strategic and independent", "Intellectual and insightful", "Visionary and innovative", "Driven and ambitious", "Confident and authoritative", "Logical and analytical"], // INTJ
-  ["Inventive and curious", "Independent and creative", "Logical and analytical", "Objective and critical", "Reserved and detached", "Flexible and adaptable"], // INTP
-  ["Friendly and outgoing", "Caring and practical", "Hardworking and dedicated", "Sensible and reliable", "Conscientious and dutiful", "Sociable and talkative"], // ISFJ
-  ["Spontaneous and playful", "Sensitive and gentle", "Flexible and adaptable", "Enthusiastic and fun-loving", "Artistic and creative", "Charming and optimistic"], // ISFP
-  ["Responsible and dependable", "Organized and efficient", "Logical and practical", "Sensible and dependable", "Loyal and hardworking", "Practical and realistic"], // ISTJ
-  ["Adventurous and spontaneous", "Flexible and resourceful", "Logical and analytical", "Energetic and action-oriented", "Independent and self-reliant", "Spontaneous and playful"], // ISTP
+const traits = [["Charismatic and inspiring", "Empathetic and compassionate", "Energetic and enthusiastic", "Dedicated and responsible", "Idealistic and romantic", "Diplomatic and tactful"], // ENFJ
+["Enthusiastic and creative", "Curious and open-minded", "Spontaneous and playful", "Energetic and friendly", "Imaginative and original", "Passionate and expressive"], // ENFP
+["Efficient and strategic", "Assertive and confident", "Ambitious and determined", "Decisive and authoritative", "Responsible and reliable", "Objective and logical"], // ENTJ
+["Quick-witted and curious", "Inventive and original", "Enthusiastic and energetic", "Excellent brainstormers", "Charismatic and inspiring", "Charming and confident"], // ENTP
+["Friendly and sociable", "Responsible and dutiful", "Conscientious and practical", "Sociable and talkative", "Sensible and cooperative", "Organized and thorough"], // ESFJ
+["Spontaneous and energetic", "Enthusiastic and fun-loving", "Flexible and adaptable", "Friendly and sociable", "Creative and artistic", "Charming and optimistic"], // ESFP
+["Practical and dependable", "Organized and efficient", "Logical and analytical", "Dutiful and responsible", "Loyal and hard-working", "Sensible and traditional"], // ESTJ
+["Energetic and action-oriented", "Adventurous and spontaneous", "Resourceful and quick-witted", "Charismatic and confident", "Optimistic and fun-loving", "Charming and lively"], // ESTP
+["Insightful and inspiring", "Introspective and reflective", "Determined and passionate", "Altruistic and empathetic", "Complex and imaginative", "Idealistic and principled"], // INFJ
+["Creative and idealistic", "Open-minded and curious", "Supportive and empathetic", "Enthusiastic and energetic", "Determined and passionate", "Flexible and adaptable"], // INFP
+["Strategic and independent", "Intellectual and insightful", "Visionary and innovative", "Driven and ambitious", "Confident and authoritative", "Logical and analytical"], // INTJ
+["Inventive and curious", "Independent and creative", "Logical and analytical", "Objective and critical", "Reserved and detached", "Flexible and adaptable"], // INTP
+["Friendly and outgoing", "Caring and practical", "Hardworking and dedicated", "Sensible and reliable", "Conscientious and dutiful", "Sociable and talkative"], // ISFJ
+["Spontaneous and playful", "Sensitive and gentle", "Flexible and adaptable", "Enthusiastic and fun-loving", "Artistic and creative", "Charming and optimistic"], // ISFP
+["Responsible and dependable", "Organized and efficient", "Logical and practical", "Sensible and dependable", "Loyal and hardworking", "Practical and realistic"], // ISTJ
+["Adventurous and spontaneous", "Flexible and resourceful", "Logical and analytical", "Energetic and action-oriented", "Independent and self-reliant", "Spontaneous and playful"], // ISTP
 ];
 
 app.get('/', (req, res) => {
-  res.render('quiz');
+  res.render('quiz', { mquestion: mquestion, tquestion: tquestion });
 });
 
 app.post('/submit', (req, res) => {
@@ -62,7 +105,7 @@ app.post('/submit', (req, res) => {
   }
 
   // console.log(numericResponses);
-  //console.log(textualResponses);
+  // console.log(textualResponses);
 
   // spawn a Python process and pass the numeric and textual responses as arguments
   const pythonProcess = spawn('python', ['script.py']);
@@ -92,9 +135,14 @@ app.post('/submit', (req, res) => {
   });
 });
 
-app.post('/newsLetter',(req,res) => {
-    console.log("request received");
+app.post('/newsLetter', (req, res) => {
+  console.log("request received");
 })
+
+app.get("/contact",(req,res)=>{
+  res.render("contact");
+})
+
 app.listen(3000, () => {
   console.log();
 });

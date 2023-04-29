@@ -1,6 +1,7 @@
 body {
   font-family: "Montserrat";
   background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
+
   text-align: center;
 }
 
@@ -191,16 +192,26 @@ button[type="submit"]:hover {
   animation: spin 2s linear infinite;
   margin: 20px auto;
   display: none;
-  }
+}
 
 @-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* footer */

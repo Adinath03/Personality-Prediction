@@ -4,12 +4,15 @@ body {
     /* font-family: 'helvetica neue'; */
     font-family: 'Montserrat', sans-serif;
     /* background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%); */
-    background-image: -webkit-linear-gradient(65deg, #f093fb 50%, #E4E9fd 50%);
+    /* background-image: -webkit-linear-gradient(65deg, #f093fb 50%, #E4E9fd 50%); */
     /* background-image: linear-gradient(45deg, #fc00ff, #00dbde);
     background-image: linear-gradient(45deg, #f093fb, #f5576c);
     background-image: linear-gradient(to right, #f12711, #f5af19);
     background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
     background-image: linear-gradient(to right, #d31027, #ea384d); */
+    background-image: url('../images/background.jpg');
+    background-size: cover; /* this will make the image cover the entire screen */
+    background-position: center center; /* this will position the image in the center */
     font-size: 16px;
     /* background-color: #e3e6f3; */
 }
